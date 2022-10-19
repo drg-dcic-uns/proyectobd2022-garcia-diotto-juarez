@@ -50,9 +50,13 @@ public class DAOEmpleadoImpl implements DAOEmpleado {
 			empleado.setNombre(rs.getString("nombre"));
 			empleado.setDireccion(rs.getString("direccion"));
 			empleado.setTelefono(rs.getString("telefono"));
+			rs.close();
+			st.close();
 			return empleado;
 		}catch(java.sql.SQLException e) {
-			e.printStackTrace();
+			logger.error("SQLException: " + e.getMessage());
+			logger.error("SQLState: " + e.getSQLState());
+			logger.error("VendorError: " + e.getErrorCode());
 			throw new Exception("Error al recuperar el empleado"); //Ver si hay que cambiarlo
 		}
 	}

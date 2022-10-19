@@ -56,11 +56,19 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 			java.sql.ResultSet rs = st.executeQuery(sql); //Si es vacio, el usuario no existe en la base de datos.
 			if(rs.next()) {
 				this.legajo = Integer.parseInt(legajo);
+				rs.close();
+				st.close();
 				return true;
 			}
-			else return false;
+			else {
+				rs.close();
+				st.close();
+				return false;
+			}
 		}catch (java.sql.SQLException e) {
-			e.printStackTrace();
+			logger.error("SQLException: " + e.getMessage());
+			logger.error("SQLState: " + e.getSQLState());
+			logger.error("VendorError: " + e.getErrorCode());
 			throw new Exception("Hubo un error al autenticar el usuario"); //Ver si hay que cambiarlo
 		}
 	}
@@ -69,21 +77,24 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	public ArrayList<String> obtenerTiposDocumento() {
 		logger.info("recupera los tipos de documentos.");
 		/** 
-		 * TODO Debe retornar una lista de strings con los tipos de documentos. 
+		 * Debe retornar una lista de strings con los tipos de documentos. 
 		 *      Deberia propagar una excepción si hay algún error en la consulta.
 		 */
 		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales. 
-		 * 
-		 *  Como no hay una tabla con los tipos de documento, se deberán recuperar todos los tipos validos
-		 *  de la tabla de pasajeros
-		 */
 		ArrayList<String> tipos = new ArrayList<String>();
-		tipos.add("DNI");
-		tipos.add("Pasaporte");
-		// Fin datos estáticos de prueba.
-		
+		try {
+			String sql = "SELECT distinct doc_tipo from pasajeros;";
+			java.sql.Statement st = conexion.createStatement();
+			java.sql.ResultSet rs = st.executeQuery(sql); 
+			while(rs.next())
+				tipos.add(rs.getString("doc_tipo"));
+			rs.close();
+			st.close();
+		}catch (java.sql.SQLException e) {	
+			logger.error("SQLException: " + e.getMessage());
+			logger.error("SQLState: " + e.getSQLState());
+			logger.error("VendorError: " + e.getErrorCode());	
+		}
 		return tipos;
 	}		
 	
@@ -104,21 +115,33 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		
 		logger.info("recupera las ciudades que tienen aeropuertos.");
 		/** 
-		 * TODO Debe retornar una lista de UbicacionesBean con todas las ubicaciones almacenadas en la B.D. 
+		 * Debe retornar una lista de UbicacionesBean con todas las ubicaciones almacenadas en la B.D. 
 		 *      Deberia propagar una excepción si hay algún error en la consulta.
 		 *      
 		 *      Reemplazar el siguiente código de prueba por los datos obtenidos desde la BD.
 		 */
 		ArrayList<UbicacionesBean> ubicaciones = new ArrayList<UbicacionesBean>();
 
-		// Datos estáticos de prueba. Quitar y reemplazar por código que recupera las ubicaciones de la B.D. en una lista de UbicacionesBean		 
-		DAOUbicacionesDatosPrueba.poblar();
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("bsas"));
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("chicago"));
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("barcelona"));
-		ubicaciones.add(DAOUbicacionesDatosPrueba.obtenerUbicacion("cordoba"));	
-		// Fin datos estáticos de prueba.
-	
+		try {
+			String sql = "SELECT distinct * from ubicaciones;";
+			java.sql.Statement st = conexion.createStatement();
+			java.sql.ResultSet rs = st.executeQuery(sql); 
+			while(rs.next()) {
+				UbicacionesBean ub = new UbicacionesBeanImpl();
+				ub.setPais(rs.getString("pais"));
+				ub.setEstado(rs.getString("estado"));
+				ub.setCiudad(rs.getString("ciudad"));
+				ub.setHuso(rs.getInt("huso"));
+				ubicaciones.add(ub);
+			}
+			st.close();
+			rs.close();
+		}catch (java.sql.SQLException e) {	
+			logger.error("SQLException: " + e.getMessage());
+			logger.error("SQLState: " + e.getSQLState());
+			logger.error("VendorError: " + e.getErrorCode());
+			throw new Exception("Error al recuperar las ubicaciones");
+		}
 		return ubicaciones;
 	}
 
