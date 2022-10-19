@@ -44,17 +44,25 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	public boolean autenticarUsuarioAplicacion(String legajo, String password) throws Exception {
 		logger.info("Se intenta autenticar el legajo {} con password {}", legajo, password);
 		/** 
-		 * TODO Código que autentica que exista un legajo de empleado y que el password corresponda a ese legajo
+		 * Código que autentica que exista un legajo de empleado y que el password corresponda a ese legajo
 		 *      (recuerde que el password guardado en la BD está encriptado con MD5) 
 		 *      En caso exitoso deberá registrar el legajo en la propiedad legajo y retornar true.
 		 *      Si la autenticación no es exitosa porque el legajo no es válido o el password es incorrecto
 		 *      deberá retornar falso y si hubo algún otro error deberá producir y propagar una excepción.
 		 */
-		
-		// Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  		
-		this.legajo = 1;
-		return true;
-		// Fin datos estáticos de prueba.
+		try {
+			String sql = "SELECT * from empleados where legajo='"+legajo+"' AND password=md5('"+password+"');";
+			java.sql.Statement st = conexion.createStatement();
+			java.sql.ResultSet rs = st.executeQuery(sql); //Si es vacio, el usuario no existe en la base de datos.
+			if(rs.next()) {
+				this.legajo = Integer.parseInt(legajo);
+				return true;
+			}
+			else return false;
+		}catch (java.sql.SQLException e) {
+			e.printStackTrace();
+			throw new Exception("Hubo un error al autenticar el usuario"); //Ver si hay que cambiarlo
+		}
 	}
 	
 	@Override

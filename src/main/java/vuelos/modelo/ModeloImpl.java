@@ -25,10 +25,8 @@ public class ModeloImpl implements Modelo {
 	@Override
 	public boolean conectar(String username, String password) {
 		logger.info("Se establece la conexión a la BD.");
-		
-		// Código de prueba. Quitar y reemplazar por código que establece y retorna la conexión.             
-    	   return true;
-    	// fin código de prueba   
+		conexion = Conexion.getConnection(username, password);
+		return conexion!=null;
 	}
 
 	@Override
