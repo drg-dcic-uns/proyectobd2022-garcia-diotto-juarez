@@ -28,7 +28,7 @@ public class DAOEmpleadoImpl implements DAOEmpleado {
 		logger.info("recupera el empleado que corresponde al legajo {}.", legajo);
 		
 		/**
-		 * Debe recuperar de la B.D. los datos del empleado que corresponda al legajo pasado 
+		 * TODO Debe recuperar de la B.D. los datos del empleado que corresponda al legajo pasado 
 		 *      como parámetro y devolver los datos en un objeto EmpleadoBean. Si no existe el legajo 
 		 *      deberá retornar null y si ocurre algun error deberá generar y propagar una excepción.	
 		 *       

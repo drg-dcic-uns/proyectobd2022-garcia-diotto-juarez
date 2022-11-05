@@ -44,26 +44,24 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	public boolean autenticarUsuarioAplicacion(String legajo, String password) throws Exception {
 		logger.info("Se intenta autenticar el legajo {} con password {}", legajo, password);
 		/** 
-		 * Código que autentica que exista un legajo de empleado y que el password corresponda a ese legajo
+		 * TODO Código que autentica que exista un legajo de empleado y que el password corresponda a ese legajo
 		 *      (recuerde que el password guardado en la BD está encriptado con MD5) 
 		 *      En caso exitoso deberá registrar el legajo en la propiedad legajo y retornar true.
 		 *      Si la autenticación no es exitosa porque el legajo no es válido o el password es incorrecto
 		 *      deberá retornar falso y si hubo algún otro error deberá producir y propagar una excepción.
 		 */
+		boolean autenticado;
 		try {
 			String sql = "SELECT * from empleados where legajo='"+legajo+"' AND password=md5('"+password+"');";
-			java.sql.Statement st = conexion.createStatement();
-			java.sql.ResultSet rs = st.executeQuery(sql); //Si es vacio, el usuario no existe en la base de datos.
+			java.sql.ResultSet rs = consulta(sql);
 			if(rs.next()) {
 				this.legajo = Integer.parseInt(legajo);
 				rs.close();
-				st.close();
-				return true;
+				autenticado = true;
 			}
 			else {
 				rs.close();
-				st.close();
-				return false;
+				autenticado = false;
 			}
 		}catch (java.sql.SQLException e) {
 			logger.error("SQLException: " + e.getMessage());
@@ -71,25 +69,24 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 			logger.error("VendorError: " + e.getErrorCode());
 			throw new Exception("Hubo un error al autenticar el usuario"); //Ver si hay que cambiarlo
 		}
+		return autenticado;
 	}
 	
 	@Override
 	public ArrayList<String> obtenerTiposDocumento() {
 		logger.info("recupera los tipos de documentos.");
 		/** 
-		 * Debe retornar una lista de strings con los tipos de documentos. 
+		 * TODO Debe retornar una lista de strings con los tipos de documentos. 
 		 *      Deberia propagar una excepción si hay algún error en la consulta.
 		 */
 		
 		ArrayList<String> tipos = new ArrayList<String>();
 		try {
 			String sql = "SELECT distinct doc_tipo from pasajeros;";
-			java.sql.Statement st = conexion.createStatement();
-			java.sql.ResultSet rs = st.executeQuery(sql); 
+			java.sql.ResultSet rs = consulta(sql);
 			while(rs.next())
 				tipos.add(rs.getString("doc_tipo"));
 			rs.close();
-			st.close();
 		}catch (java.sql.SQLException e) {	
 			logger.error("SQLException: " + e.getMessage());
 			logger.error("SQLState: " + e.getSQLState());
@@ -115,7 +112,7 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		
 		logger.info("recupera las ciudades que tienen aeropuertos.");
 		/** 
-		 * Debe retornar una lista de UbicacionesBean con todas las ubicaciones almacenadas en la B.D. 
+		 * TODO Debe retornar una lista de UbicacionesBean con todas las ubicaciones almacenadas en la B.D. 
 		 *      Deberia propagar una excepción si hay algún error en la consulta.
 		 *      
 		 *      Reemplazar el siguiente código de prueba por los datos obtenidos desde la BD.
@@ -124,8 +121,7 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 
 		try {
 			String sql = "SELECT distinct * from ubicaciones;";
-			java.sql.Statement st = conexion.createStatement();
-			java.sql.ResultSet rs = st.executeQuery(sql); 
+			java.sql.ResultSet rs = consulta(sql);
 			while(rs.next()) {
 				UbicacionesBean ub = new UbicacionesBeanImpl();
 				ub.setPais(rs.getString("pais"));
@@ -134,7 +130,6 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 				ub.setHuso(rs.getInt("huso"));
 				ubicaciones.add(ub);
 			}
-			st.close();
 			rs.close();
 		}catch (java.sql.SQLException e) {	
 			logger.error("SQLException: " + e.getMessage());

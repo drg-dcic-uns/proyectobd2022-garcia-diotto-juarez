@@ -922,3 +922,1579 @@ Saliendo de la aplicación.
 Se cierra la conexión a la BD.
 Se intenta cerrar la conexión activa
 Eliminación de la ventana.
+Se inicia la aplicaci�n.
+Creaci�n de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperaci�n de los datos para la conexi�n con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se carg� exitosamente
+Par�metros de conexi�n: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexi�n a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexi�n con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminaci�n de la ventana de login.
+Saliendo de la aplicaci�n.
+Se cierra la conexi�n a la BD.
+Se intenta cerrar la conexi�n activa
+Eliminaci�n de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 12345, password 100
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Intenta ingresar como Empleado con legajo 12345, password 100
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 12345 con password 100
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 14:32:02 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 14:32:02 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 1 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Se solicita quitar todas las selecciones.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 1 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Se solicita quitar todas las selecciones.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Bolivia - La Paz - La Paz.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 14:32:02 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Bolivia - La Paz - La Paz.
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:10 Origen:Argentina - Buenos Aires - Buenos Aires Destino:Bolivia - La Paz - La Paz.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 14:32:02 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Bolivia - La Paz - La Paz.
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 14:45:26 ART 2022 desde Bolivia - La Paz - La Paz a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 1
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 30000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 30000 .
+Se recuperaron 1 clases para el vuelo 30000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 20000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 20000 .
+Se recuperaron 1 clases para el vuelo 20000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:10 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+La fecha hasta debe estar vacía.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:10 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:09:57 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:10:06 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 0
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 1 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:09:57 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 15:09:57 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 0 
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Buenos Aires - Bahia Blanca.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 15:09:57 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos recuperados es 0 
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:20 fechaHasta:20 Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Buenos Aires - Bahia Blanca.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 15:09:57 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 15:11:20 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos ida es 0 y los vuelos de vuelta es 0
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:12 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Buenos Aires - Bahia Blanca.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Oct 12 15:09:57 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos recuperados es 0 
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:12 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Wed Oct 12 15:09:57 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 0 
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:10 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:09:57 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: Communications link failure
+
+The last packet successfully received from the server was 958,288 milliseconds ago. The last packet sent successfully to the server was 958,289 milliseconds ago.
+SQLState: 08S01
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Fecha desde es mayor a fecha hasta
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:09:57 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: No operations allowed after connection closed.
+SQLState: 08003
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:10 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:59:35 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 3 y los vuelos de vuelta es 0
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:10 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Bahia Blanca.
+La ubicación origen es igual a la ubicación destino.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Bahia Blanca.
+La ubicación origen es igual a la ubicación destino.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:20 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: The value '-5:0:0' is an invalid TIME value. JDBC Time objects represent a wall-clock time and not a duration as MySQL treats them. If you are treating this type as a duration, consider retrieving this value as a string and dealing with it according to your requirements.
+SQLState: S1009
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:10 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+La fecha de desde en mayor a la fecha hasta.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 00:00:00 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+SQLException: The value '-3:15:0' is an invalid TIME value. JDBC Time objects represent a wall-clock time and not a duration as MySQL treats them. If you are treating this type as a duration, consider retrieving this value as a string and dealing with it according to your requirements.
+SQLState: S1009
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 00:00:00 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+SQLException: The value '-3:15:0' is an invalid TIME value. JDBC Time objects represent a wall-clock time and not a duration as MySQL treats them. If you are treating this type as a duration, consider retrieving this value as a string and dealing with it according to your requirements.
+SQLState: S1009
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: The value '-5:0:0' is an invalid TIME value. JDBC Time objects represent a wall-clock time and not a duration as MySQL treats them. If you are treating this type as a duration, consider retrieving this value as a string and dealing with it according to your requirements.
+SQLState: S1009
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 15:59:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: The value '-5:0:0' is an invalid TIME value. JDBC Time objects represent a wall-clock time and not a duration as MySQL treats them. If you are treating this type as a duration, consider retrieving this value as a string and dealing with it according to your requirements.
+SQLState: S1009
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 00:00:00 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:03:24 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+SQLException: The value '-3:15:0' is an invalid TIME value. JDBC Time objects represent a wall-clock time and not a duration as MySQL treats them. If you are treating this type as a duration, consider retrieving this value as a string and dealing with it according to your requirements.
+SQLState: S1009
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Thu Nov 10 16:10:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Sun Nov 20 16:10:33 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 0 y los vuelos de vuelta es 0
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:10:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:10:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: The value '-5:0:0' is an invalid TIME value. JDBC Time objects represent a wall-clock time and not a duration as MySQL treats them. If you are treating this type as a duration, consider retrieving this value as a string and dealing with it according to your requirements.
+SQLState: S1009
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Bahia Blanca.
+La ubicación origen es igual a la ubicación destino.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:21:05 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 35000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 35000 .
+Se recuperaron 0 clases para el vuelo 35000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 35000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 35000 .
+Se recuperaron 0 clases para el vuelo 35000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 35000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 35000 .
+Se recuperaron 0 clases para el vuelo 35000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:21:05 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:21:33 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 3 y los vuelos de vuelta es 3
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:21:05 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Buenos Aires - Bahia Blanca.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:21:05 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos recuperados es 0 
+Se solicita a la ventana mostrar la información de 0 vuelos para viaje de ida
+Carga la tabla de IDA.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Buenos Aires - Bahia Blanca.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:21:05 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:20 fechaHasta:null Origen:Argentina - Buenos Aires - Buenos Aires Destino:Argentina - Buenos Aires - Bahia Blanca.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:21:05 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de solo IDA.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:24:24 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:24:24 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:24:37 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 3 y los vuelos de vuelta es 3
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Bahia Blanca.
+La ubicación origen es igual a la ubicación destino.
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:28:44 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:28:44 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:29:07 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 3 y los vuelos de vuelta es 3
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:28:44 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:29:07 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 3 y los vuelos de vuelta es 3
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 0 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 0 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:33:22 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 3 
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:33:22 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:33:37 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 3 y los vuelos de vuelta es 3
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:33:22 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:33:37 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 3 y los vuelos de vuelta es 3
+Se solicita a la ventana mostrar la información de 3 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:40:44 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: Column 'codigo_aero_sale' not found.
+SQLState: S0022
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:43:48 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: Column 'dia_sale' not found.
+SQLState: S0022
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:44:57 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+SQLException: Column 'hora_llega' not found.
+SQLState: S0022
+VendorError: 0
+Se produjo una excepción Error inesperado al consultar la B.D.
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:45:24 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:45:24 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:45:36 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 1
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
