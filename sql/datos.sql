@@ -38,9 +38,9 @@ INSERT INTO pasajeros VALUES ("DNI","Peralta","Maria","Alem 1290","291 289-7204"
 INSERT INTO salidas VALUES ("Do","10000","09:10","08:00","modelo1");
 INSERT INTO salidas VALUES ("Mi","20000","20:00","15:00","modelo2");
 INSERT INTO salidas VALUES ("Vi","30000","23:00","18:00","modelo3"); 
-INSERT INTO salidas VALUES ("Ma","15000","15:00","17:00","modelo1");
-INSERT INTO salidas VALUES ("Ju","35000","12:00","17:00","modelo2");
-INSERT INTO salidas VALUES ("Lu","40000","07:00","10:15","modelo2");
+INSERT INTO salidas VALUES ("Ma","15000","19:00","07:00","modelo1");
+INSERT INTO salidas VALUES ("Ju","35000","17:00","09:00","modelo2");
+INSERT INTO salidas VALUES ("Lu","40000","10:00","05:15","modelo2");
 
 INSERT INTO brinda VALUES ("Do","10000","Turista",9999,200);
 INSERT INTO brinda VALUES ("Do","10000","Ejecutiva",15000.01,59);
