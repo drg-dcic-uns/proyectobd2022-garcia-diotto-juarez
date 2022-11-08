@@ -50,7 +50,7 @@ public class ModeloImpl implements Modelo {
 		{       
 			Statement st = conexion.createStatement();
 			rs = st.executeQuery(sql);
-			st.close();
+			//st.close();		Genera al intentar utilizar despues el ResultSet.
 		}
 		catch (SQLException ex){
 		   logger.error("SQLException: " + ex.getMessage());

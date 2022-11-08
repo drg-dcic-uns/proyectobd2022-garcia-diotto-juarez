@@ -50,24 +50,21 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		 *      Si la autenticación no es exitosa porque el legajo no es válido o el password es incorrecto
 		 *      deberá retornar falso y si hubo algún otro error deberá producir y propagar una excepción.
 		 */
-		boolean autenticado;
+		boolean autenticado = false;
 		try {
 			String sql = "SELECT * from empleados where legajo='"+legajo+"' AND password=md5('"+password+"');";
-			java.sql.ResultSet rs = consulta(sql);
+			ResultSet rs = consulta(sql);
 			if(rs.next()) {
 				this.legajo = Integer.parseInt(legajo);
-				rs.close();
 				autenticado = true;
 			}
-			else {
-				rs.close();
-				autenticado = false;
-			}
+			rs.getStatement().close();
+			rs.close();
 		}catch (java.sql.SQLException e) {
 			logger.error("SQLException: " + e.getMessage());
 			logger.error("SQLState: " + e.getSQLState());
 			logger.error("VendorError: " + e.getErrorCode());
-			throw new Exception("Hubo un error al autenticar el usuario"); //Ver si hay que cambiarlo
+			throw new Exception("Hubo un error al autenticar el usuario");
 		}
 		return autenticado;
 	}
@@ -86,6 +83,7 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 			java.sql.ResultSet rs = consulta(sql);
 			while(rs.next())
 				tipos.add(rs.getString("doc_tipo"));
+			rs.getStatement().close();
 			rs.close();
 		}catch (java.sql.SQLException e) {	
 			logger.error("SQLException: " + e.getMessage());
@@ -130,6 +128,7 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 				ub.setHuso(rs.getInt("huso"));
 				ubicaciones.add(ub);
 			}
+			rs.getStatement().close();
 			rs.close();
 		}catch (java.sql.SQLException e) {	
 			logger.error("SQLException: " + e.getMessage());
