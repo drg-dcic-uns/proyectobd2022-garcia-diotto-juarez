@@ -57,7 +57,7 @@ public class DAOEmpleadoImpl implements DAOEmpleado {
 			logger.error("SQLException: " + e.getMessage());
 			logger.error("SQLState: " + e.getSQLState());
 			logger.error("VendorError: " + e.getErrorCode());
-			throw new Exception("Error al recuperar el empleado"); //Ver si hay que cambiarlo
+			throw new Exception("Error al recuperar el empleado");
 		}
 	}
 

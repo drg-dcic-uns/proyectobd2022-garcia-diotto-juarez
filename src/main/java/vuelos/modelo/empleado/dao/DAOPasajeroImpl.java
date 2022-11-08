@@ -1,11 +1,14 @@
 package vuelos.modelo.empleado.dao;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import vuelos.modelo.empleado.beans.PasajeroBean;
+import vuelos.modelo.empleado.beans.PasajeroBeanImpl;
 import vuelos.modelo.empleado.dao.datosprueba.DAOPasajeroDatosPrueba;
 
 public class DAOPasajeroImpl implements DAOPasajero {
@@ -35,16 +38,31 @@ public class DAOPasajeroImpl implements DAOPasajero {
 		 */		
 
 		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */	
-		PasajeroBean pasajero = DAOPasajeroDatosPrueba.obtenerPasajero(nroDoc);
-				
-		logger.info("El DAO retorna al pasajero {} {}", pasajero.getApellido(), pasajero.getNombre());
-		
+		PasajeroBean pasajero = null;
+		String sql = "SELECT * FROM pasajeros WHERE doc_tipo='"+tipoDoc+"' AND doc_nro='"+nroDoc+"';";
+		try {
+			Statement st = conexion.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			if(rs.next()) {
+				pasajero = new PasajeroBeanImpl();
+				pasajero.setApellido(rs.getString("apellido"));
+				pasajero.setDireccion(rs.getString("direccion"));
+				pasajero.setNacionalidad(rs.getString("nacionalidad"));
+				pasajero.setNombre(rs.getString("nombre"));
+				pasajero.setNroDocumento(nroDoc);
+				pasajero.setTelefono(rs.getString("telefono"));
+				pasajero.setTipoDocumento(tipoDoc);
+				logger.info("El DAO retorna al pasajero {} {}", pasajero.getApellido(), pasajero.getNombre());
+			}
+			st.close();
+			rs.close();
+		}catch(java.sql.SQLException e) {
+			logger.error("SQLException: " + e.getMessage());
+			logger.error("SQLState: " + e.getSQLState());
+			logger.error("VendorError: " + e.getErrorCode());
+			throw new Exception("Error al recuperar el pasajeroS");
+		}
 		return pasajero;
-	    // Fin datos estáticos de prueba. 
-		
 	
 	}
 	
