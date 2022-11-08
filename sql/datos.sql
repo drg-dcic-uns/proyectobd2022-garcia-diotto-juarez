@@ -59,9 +59,9 @@ INSERT INTO brinda VALUES ("Lu","40000","Primera",30001,17);
 INSERT INTO brinda VALUES ("Lu","40000","Turista",10099.99,150);
 
 
-INSERT INTO reservas(fecha,vencimiento,estado,legajo,doc_tipo,doc_nro) VALUES ("2022-04-22","2023-12-04","confirmada",100,"DNI",22057189);
-INSERT INTO reservas(fecha,vencimiento,estado,legajo,doc_tipo,doc_nro) VALUES ("2022-01-22","2023-07-12","en espera",101,"DNI",49210982);
-INSERT INTO reservas(fecha,vencimiento,estado,legajo,doc_tipo,doc_nro) VALUES ("2021-09-22","2022-11-29","pagada",102,"DNI",18390876);
+#INSERT INTO reservas(fecha,vencimiento,estado,legajo,doc_tipo,doc_nro) VALUES ("2022-04-22","2023-12-04","confirmada",100,"DNI",22057189);
+#INSERT INTO reservas(fecha,vencimiento,estado,legajo,doc_tipo,doc_nro) VALUES ("2022-01-22","2023-07-12","en espera",101,"DNI",49210982);
+#INSERT INTO reservas(fecha,vencimiento,estado,legajo,doc_tipo,doc_nro) VALUES ("2021-09-22","2022-11-29","pagada",102,"DNI",18390876);
 
 INSERT INTO instancias_vuelo VALUES("Do","10000","2022-12-10","a tiempo");
 INSERT INTO instancias_vuelo VALUES("Mi","20000","2022-12-10","cancelado");
@@ -70,14 +70,14 @@ INSERT INTO instancias_vuelo VALUES("Ma","15000","2022-12-20","a tiempo");
 INSERT INTO instancias_vuelo VALUES("Ju","35000","2022-12-20","a tiempo");
 INSERT INTO instancias_vuelo VALUES("Lu","40000","2022-12-20","demorado");
 
-INSERT INTO asientos_reservados VALUES("10000","2022-12-10","Turista",100);
+/*INSERT INTO asientos_reservados VALUES("10000","2022-12-10","Turista",100);
 INSERT INTO asientos_reservados VALUES("10000","2022-12-10","Ejecutiva",19);
 INSERT INTO asientos_reservados VALUES("10000","2022-12-10","Primera",8);
 INSERT INTO asientos_reservados VALUES("20000","2022-12-10","Turista",120); 
 INSERT INTO asientos_reservados VALUES("20000","2022-12-10","Ejecutiva",30); 
 INSERT INTO asientos_reservados VALUES("20000","2022-12-10","Primera",15); 
 INSERT INTO asientos_reservados VALUES("30000","2022-12-10","Turista",256); /*Misma cantidad de asientos reservados que los que tiene el avión*/
-INSERT INTO asientos_reservados VALUES("30000","2022-12-10","Ejecutiva",50);
+/*INSERT INTO asientos_reservados VALUES("30000","2022-12-10","Ejecutiva",50);
 INSERT INTO asientos_reservados VALUES("30000","2022-12-10","Primera",10);
 INSERT INTO asientos_reservados VALUES("15000","2022-12-20","Turista",50);
 INSERT INTO asientos_reservados VALUES("15000","2022-12-20","Ejecutiva",20);
@@ -87,12 +87,12 @@ INSERT INTO asientos_reservados VALUES("35000","2022-12-20","Ejecutiva",25);
 INSERT INTO asientos_reservados VALUES("35000","2022-12-20","Primera",15);
 INSERT INTO asientos_reservados VALUES("40000","2022-12-20","Turista",200);
 INSERT INTO asientos_reservados VALUES("40000","2022-12-20","Ejecutiva",90);
-INSERT INTO asientos_reservados VALUES("40000","2022-12-20","Primera",50);
+INSERT INTO asientos_reservados VALUES("40000","2022-12-20","Primera",50);*/
 
 INSERT INTO posee VALUES ("Turista",1000);
 INSERT INTO posee VALUES ("Ejecutiva",2000);
 INSERT INTO posee VALUES ("Primera",3000);
 
-INSERT INTO reserva_vuelo_clase VALUES (1,"10000","2022-12-10","Ejecutiva");
-INSERT INTO reserva_vuelo_clase VALUES (2,"20000","2022-12-10","Turista");
-INSERT INTO reserva_vuelo_clase VALUES (3,"20000","2022-12-10","Turista");
+#INSERT INTO reserva_vuelo_clase VALUES (1,"10000","2022-12-10","Ejecutiva");
+#INSERT INTO reserva_vuelo_clase VALUES (2,"20000","2022-12-10","Turista");
+#INSERT INTO reserva_vuelo_clase VALUES (3,"20000","2022-12-10","Turista");

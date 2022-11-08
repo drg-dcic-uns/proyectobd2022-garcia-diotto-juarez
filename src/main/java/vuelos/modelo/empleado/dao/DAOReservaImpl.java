@@ -72,7 +72,7 @@ public class DAOReservaImpl implements DAOReserva {
 		 */
 		
 		int resultado;
-		try (CallableStatement cstmt = conexion.prepareCall("CALL PROCEDURE reservaSoloIda(?, ?, ?, ?, ?, ?, ?)"))
+		try (CallableStatement cstmt = conexion.prepareCall("CALL reservaSoloIda(?, ?, ?, ?, ?, ?, ?)"))
 		{
 			cstmt.setString(1,vuelo.getNroVuelo());
 			cstmt.setDate(2, Fechas.convertirDateADateSQL(vuelo.getFechaVuelo()));
@@ -81,7 +81,7 @@ public class DAOReservaImpl implements DAOReserva {
 			cstmt.setInt(5, pasajero.getNroDocumento());
 			cstmt.setInt(6, empleado.getLegajo());
 			cstmt.registerOutParameter(7, java.sql.Types.INTEGER);
-			cstmt.executeUpdate();
+			cstmt.execute();
 			ResultSet rs = cstmt.getResultSet();
 			if(rs.next()) {
 				resultado = cstmt.getInt(7);
@@ -90,6 +90,7 @@ public class DAOReservaImpl implements DAOReserva {
 				}	
 			}
 			else throw new Exception("No se pudo realizar la reserva");
+			cstmt.close();
 		}
 		catch (SQLException ex){
 		  		logger.debug("Error al consultar la BD. SQLException: {}. SQLState: {}. VendorError: {}.", ex.getMessage(), ex.getSQLState(), ex.getErrorCode());

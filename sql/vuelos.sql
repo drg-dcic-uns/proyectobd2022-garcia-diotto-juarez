@@ -264,19 +264,18 @@ b.precio AS 'precio',(round(b.cant_asientos + (c.porcentaje * b.cant_asientos)) 
 
 GRANT SELECT ON vuelos.vuelos_disponibles TO 'cliente'@'%';
 
-GRANT execute on procedure vuelos.reservaSoloIda to empleado;
-GRANT execute on procedure vuelos.reservaIdaVuelta to empleado;
-
 #----------------------------------------------------------------------------------------------------------------
 #Stored Procedures
 
 delimiter !
 create procedure reservaSoloIda(IN nro_vuelo VARCHAR(10), IN fecha_vuelo DATE, IN clase VARCHAR(20), IN doc_tipo VARCHAR(45), IN doc_nro INT UNSIGNED, IN legajo INT UNSIGNED, OUT resultado INT)
 begin
-	DECLARE asientos_disponibles SMALLINT UNSIGNED;
+	DECLARE a_disponibles SMALLINT UNSIGNED;
+	DECLARE cant_brinda SMALLINT UNSIGNED;
 	DECLARE estadoR VARCHAR(15);
 	DECLARE fecha_hoy DATE;
 	DECLARE fecha_vencimiento DATE;
+	DECLARE cant_reservas INT; #Cantida de reservas o numero de reserva
 
 	#Manejo de excepciones
 	DECLARE codigo_SQL CHAR(5) DEFAULT '00000';
@@ -287,31 +286,32 @@ begin
 		GET DIAGNOSTICS CONDITION 1 codigo_MYSQL= MYSQL_ERRNO,
 		codigo_SQL= RETURNED_SQLSTATE,
 		mensaje_error= MESSAGE_TEXT;
-		SELECT 'SQLEXCEPTION!, transacción abortada' AS 'resultado',
+		SELECT 'SQLEXCEPTION!, transaccion abortada' AS 'resultado',
 		codigo_MySQL, codigo_SQL, mensaje_error;
 		ROLLBACK;
 	END;
 	
 	START TRANSACTION;
 	SET resultado = -1;
-	IF EXISTS (SELECT * FROM vuelos_disponibles vuelos WHERE nro_vuelo=vuelos.nro_vuelo AND fecha_vuelo=vuelos.fecha AND clase=vuelos.clase) THEN
-		IF EXISTS (SELECT * FROM pasajeros p WHERE doc_tipo=p.doc_tipo AND doc_nro=p.doc_nro) THEN
-			SELECT cantidad INTO asientos_disponibles
-			FROM asientos_reservados a_r WHERE nro_vuelo=a_r.nro_vuelo AND fecha_vuelo=a_r.fecha AND clase=a_r.clase FOR UPDATE;
-			IF (asientos_disponibles>0) THEN
+	IF EXISTS (SELECT * FROM vuelos_disponibles vuelos WHERE nro_vuelo=vuelos.nro_vuelo AND fecha_vuelo=vuelos.fecha AND clase=vuelos.clase) THEN 	#Nos fijamos que exista el vuelo
+		IF EXISTS (SELECT * FROM pasajeros p WHERE doc_tipo=p.doc_tipo AND doc_nro=p.doc_nro) THEN		#Nos fijamos que exista el pasajero
+			SELECT asientos_disponibles INTO a_disponibles
+			FROM vuelos_disponibles v_d WHERE nro_vuelo=v_d.nro_vuelo AND fecha_vuelo=v_d.fecha AND clase=v_d.clase;	#Obtenemos los asientos disponibles
+			IF (a_disponibles>0) THEN
 				SET fecha_hoy = CURDATE();
 				SET fecha_vencimiento = DATE_SUB(fecha_vuelo, INTERVAL 15 DAY);
-				SET estadoR = 'pagado'; #O algun otro estado para que no sea NULL o no definido
+				SET estadoR = 'iniciada';		 #O algun otro estado para que no sea NULL o no definido
 				INSERT INTO reservas (fecha,vencimiento,estado,legajo,doc_tipo,doc_nro) VALUES (fecha_hoy,fecha_vencimiento,estadoR,legajo,doc_tipo,doc_nro);	#Realizamos la reserva sin un estado
-				SELECT last_insert_id() INTO cant_reservas FROM reservas;
-				IF(cant_reservas<asientos_disponibles) THEN		#Determinamos el estado que corresponde
-					SET estado = 'confirmada';
+				SELECT DISTINCT last_insert_id() INTO cant_reservas from reservas;
+				SELECT cant_asientos INTO cant_brinda FROM brinda b WHERE nro_vuelo=b.vuelo AND clase=b.clase;
+				IF(cant_reservas<cant_brinda) THEN		#Determinamos el estado que corresponde, fijandonos si la cantidad de reservas es menor a la cantida de asientos que brinda
+					SET estadoR = 'confirmada';
 				ELSE
-					SET estado = 'en espera';
+					SET estadoR = 'en espera';
 				END IF;
-				UPDATE reservas SET estado = estadoR; WHERE numero=cant_reservas;		#Lo actualizamos
+				UPDATE reservas SET estado = estadoR WHERE numero=cant_reservas;		#Lo actualizamos
 				INSERT INTO reserva_vuelo_clase VALUES (cant_reservas,nro_vuelo,fecha_vuelo,clase);		#Asociamos la reserva a la instancia de vuelo
-				UPDATE asientos_reservados SET cantidad = cantidad + 1 WHERE nro_vuelo=a_r.nro_vuelo AND fecha_vuelo=a_r.fecha AND clase=a_r.clase; #Aumentar la cantida de asientos reservados para la clase del vuelo en la fecha indicada
+				UPDATE asientos_reservados a_r SET cantidad = cantidad + 1 WHERE nro_vuelo=a_r.vuelo AND fecha_vuelo=a_r.fecha AND clase=a_r.clase; #Aumentar la cantida de asientos reservados para la clase del vuelo en la fecha indicada
 				SELECT 'La reserva se realizo con exito' AS 'resultado';
 				SET resultado = cant_reservas;
 			ELSE
@@ -334,23 +334,29 @@ begin
 end; !
 delimiter ;
 
+GRANT execute on procedure vuelos.reservaSoloIda to 'empleado'@'%';
+GRANT execute on procedure vuelos.reservaIdaVuelta to 'empleado'@'%';
+
+
+#---------------------------------------------------------------------------------------------------
+#Trigger
+
 delimiter !
-create procedure test(IN t INT, OUT obo int)
-begin
-	SELECT 'teton' as 'obo';
-	SET obo = 3;
-end; !
-
+CREATE TRIGGER inicializarReservas
+	AFTER INSERT ON instancias_vuelo
+	FOR EACH ROW
+	BEGIN
+		declare fin boolean default false;
+		declare claseBrinda VARCHAR(20);
+		declare C cursor for SELECT clase FROM brinda WHERE vuelo=NEW.vuelo;
+		declare continue handler for not found set fin = true;
+		open C;
+		fetch C into claseBrinda;
+		while not fin do
+			INSERT INTO asientos_reservados(vuelo,fecha,clase,cantidad)
+			VALUES(NEW.vuelo,NEW.fecha,claseBrinda,0);
+			fetch C into claseBrinda;
+		end while;
+	close C;
+END; !
 delimiter ;
-
-
-
-
-
-
-
-
-
-
-
-
