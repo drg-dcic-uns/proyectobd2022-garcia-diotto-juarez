@@ -121,8 +121,8 @@ public class DAOReservaImpl implements DAOReserva {
 		 *		   pero luego deberá propagarla para que se encargue el controlador.
 		 *
 		 */
-		int resultado;
-		try (CallableStatement cstmt = conexion.prepareCall("CALL PROCEDURE reservarIdaVuelta(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
+		int resultado;                                                      
+		try (CallableStatement cstmt = conexion.prepareCall("CALL reservaIdaVuelta(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))
 		{
 			cstmt.setString(1,vueloIda.getNroVuelo());
 			cstmt.setDate(2, Fechas.convertirDateADateSQL(vueloIda.getFechaVuelo()));
@@ -134,7 +134,8 @@ public class DAOReservaImpl implements DAOReserva {
 			cstmt.setInt(8, pasajero.getNroDocumento());
 			cstmt.setInt(9, empleado.getLegajo());
 			cstmt.registerOutParameter(10, java.sql.Types.INTEGER);
-			cstmt.executeUpdate();
+			System.out.println("llegue");
+			cstmt.execute();
 			ResultSet rs = cstmt.getResultSet();
 			if(rs.next()) {
 				resultado = cstmt.getInt(10);
@@ -143,6 +144,7 @@ public class DAOReservaImpl implements DAOReserva {
 				}	
 			}
 			else throw new Exception("No se pudo realizar la reserva");
+			cstmt.close();
 		}
 		catch (SQLException ex){
 		  		logger.debug("Error al consultar la BD. SQLException: {}. SQLState: {}. VendorError: {}.", ex.getMessage(), ex.getSQLState(), ex.getErrorCode());
@@ -173,7 +175,7 @@ public class DAOReservaImpl implements DAOReserva {
 		/*
 		 * Importante, tenga en cuenta de setear correctamente el atributo IdaVuelta con el método setEsIdaVuelta en la ReservaBean
 		 */
-		String sql0= "SELECT count(numero) FROM reservas WHERE numero="+codigoReserva;
+		String sql0= "SELECT count(numero) FROM reserva_vuelo_clase WHERE numero="+codigoReserva;
 		int cantidad=0;
 		Statement stmt0= conexion.createStatement();
 		ResultSet rs0= stmt0.executeQuery(sql0);
@@ -251,7 +253,7 @@ public class DAOReservaImpl implements DAOReserva {
 			DetalleVueloBean c= new DetalleVueloBeanImpl();
 			String vuelo= rs0.getString("vuelo");
 			String clase= rs0.getString("clase");
-			String sql= "SELECT * from vuelos_disponibles WHERE nro_vuelo='"+vuelo+"' AND clase='"+clase+"'";
+			String sql= "SELECT * from vuelos_disponibles WHERE nro_vuelo='"+vuelo+"' AND clase='"+clase+"' AND fecha='"+ rs0.getString("fecha_vuelo")+"'";
 			Statement stmt= conexion.createStatement();
 			ResultSet rs= stmt.executeQuery(sql);
 			while(rs.next()) {
