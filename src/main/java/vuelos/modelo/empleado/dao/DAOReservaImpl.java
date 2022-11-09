@@ -134,7 +134,6 @@ public class DAOReservaImpl implements DAOReserva {
 			cstmt.setInt(8, pasajero.getNroDocumento());
 			cstmt.setInt(9, empleado.getLegajo());
 			cstmt.registerOutParameter(10, java.sql.Types.INTEGER);
-			System.out.println("llegue");
 			cstmt.execute();
 			ResultSet rs = cstmt.getResultSet();
 			if(rs.next()) {
