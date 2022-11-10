@@ -4906,3 +4906,215 @@ Realiza la reserva de ida y vuelta con pasajero 22057189
 Solicita recuperar información de la reserva con codigo 2
 Realizó la reserva y solicita que la ventana muestre la info
 Se solicita mostrar la reserva cuyo estado es confirmada
+Se inicia la aplicación.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+Intenta ingresar como Empleado con legajo 100, password 12345
+Recupera el usuario de BD para Empleado para poder conectarse con los permisos de dicho usuario.
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Se establece la conexión a la BD.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/vuelos?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 100 con password 12345
+Se intenta realizar la siguiente consulta SELECT * from empleados where legajo='100' AND password=md5('12345');
+Empleado 100 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Se registra al empleado Sanchez, Carlos con legajo 100
+muestra la ventana
+Recuperar del modelo los destinos posibles
+recupera las ciudades que tienen aeropuertos.
+Se intenta realizar la siguiente consulta SELECT distinct * from ubicaciones;
+informar a la ventana los destinos posibles
+Carga los combos de ciudades con las 3 ubicaciones recuperados
+Muestra el panel de consulta/reserva de vuelos.
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de buscar vuelos disponibles.
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:23:09 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+Valida que haya seleccionado todo e informa a la ventana que muestre la pantalla de reserva.
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT distinct doc_tipo from pasajeros;
+El controlador solicitó que se muestre la pantalla para realizar una reserva.
+Carga el combo con los 1 tipos de documento recuperados
+Busca al pasajero DNI 22057189
+Solicita al DAO un pasajero con tipo DNI y nro 22057189
+El DAO retorna al pasajero Rafael Jorge
+La ventana muestra al pasajero.
+Se muestra al pasajero en el panel de solo ida
+Se solicita comenzar el proceso de reserva.
+Se solicita al modelo realizar una reserva solo ida
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Realiza la reserva de solo ida con pasajero 22057189
+Solicita recuperar información de la reserva con codigo 1
+Realizó la reserva y solicita que la ventana muestre la info
+Se solicita mostrar la reserva cuyo estado es confirmada
+Ejecuta el listener de buscar vuelos disponibles.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Solicita información de vuelos disponibles: esIdaVuelta:false fechaDesde:10 fechaHasta:null Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:23:28 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+La cantidad de vuelos recuperados es 1 
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para un viaje de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de solo IDA.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+Valida que haya seleccionado todo e informa a la ventana que muestre la pantalla de reserva.
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT distinct doc_tipo from pasajeros;
+El controlador solicitó que se muestre la pantalla para realizar una reserva.
+Carga el combo con los 1 tipos de documento recuperados
+Busca al pasajero DNI 22057189
+Solicita al DAO un pasajero con tipo DNI y nro 22057189
+El DAO retorna al pasajero Rafael Jorge
+La ventana muestra al pasajero.
+Se muestra al pasajero en el panel de solo ida
+Se solicita comenzar el proceso de reserva.
+Se solicita al modelo realizar una reserva solo ida
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Realiza la reserva de solo ida con pasajero 22057189
+Solicita recuperar información de la reserva con codigo 2
+Realizó la reserva y solicita que la ventana muestre la info
+Se solicita mostrar la reserva cuyo estado es confirmada
+Ejecuta el listener de buscar vuelos disponibles.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle seleccionada para un vuelo de Solo Ida.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 16:23:44 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:23:47 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 1
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+Valida que haya seleccionado todo e informa a la ventana que muestre la pantalla de reserva.
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT distinct doc_tipo from pasajeros;
+El controlador solicitó que se muestre la pantalla para realizar una reserva IDA y VUELTA.
+Carga el combo con los 1 tipos de documento recuperados
+Busca al pasajero DNI 22057189
+Solicita al DAO un pasajero con tipo DNI y nro 22057189
+El DAO retorna al pasajero Rafael Jorge
+La ventana muestra al pasajero.
+Se muestra al pasajero en el panel de ida y vuelta
+Se solicita comenzar el proceso de reserva.
+Se solicita al modelo realizar una reserva de ida y vuelta
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Realiza la reserva de ida y vuelta con pasajero 22057189
+Solicita recuperar información de la reserva con codigo 3
+Realizó la reserva y solicita que la ventana muestre la info
+Se solicita mostrar la reserva cuyo estado es confirmada
+Ejecuta el listener de buscar vuelos disponibles.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+debe informar al controlador para que recupere la info del detalle
+Se deseleccionó el vuelo
+Solicita información de vuelos disponibles: esIdaVuelta:true fechaDesde:10 fechaHasta:20 Origen:Argentina - Buenos Aires - Bahia Blanca Destino:Argentina - Buenos Aires - Buenos Aires.
+Se solicita quitar todas las selecciones.
+Solicita información de vuelos disponibles de ida y vuelta
+Recupera la lista de vuelos disponibles para la fecha Sat Dec 10 00:00:00 ART 2022 desde Argentina - Buenos Aires - Bahia Blanca a Argentina - Buenos Aires - Buenos Aires.
+Recupera la lista de vuelos disponibles para la fecha Tue Dec 20 16:24:10 ART 2022 desde Argentina - Buenos Aires - Buenos Aires a Argentina - Buenos Aires - Bahia Blanca.
+La cantidad de vuelos ida es 1 y los vuelos de vuelta es 1
+Se solicita a la ventana mostrar la información de 1 vuelos para viaje de ida y vuelta
+Carga la tabla de IDA.
+Carga la tabla de IDA.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 10000 con fecha 2022-12-10 para ida y vuelta sobre el vuelo de ida.
+Recupera la cantidad de asientos y precio del vuelo 10000 .
+Se recuperaron 3 clases para el vuelo 10000
+Carga el detalle tabla de detalle de IDA en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+debe informar al controlador para que recupere la info del detalle
+Solicita detalle del vuelo 40000 con fecha 2022-12-20 para ida y vuelta sobre el vuelo de vuelta.
+Recupera la cantidad de asientos y precio del vuelo 40000 .
+Se recuperaron 3 clases para el vuelo 40000
+Carga el detalle tabla de detalle de Vuelta en viaje de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de IDA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+se selecciono una clase o se cambio la seleccion de vuelo y se actualizaron las clases (deseleccion)
+Se actualiza el detalle del vuelo de VUELTA seleccionado para un vuelo de Ida y Vuelta.
+Valida que haya seleccionado todo e informa a la ventana que muestre la pantalla de reserva.
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT distinct doc_tipo from pasajeros;
+El controlador solicitó que se muestre la pantalla para realizar una reserva IDA y VUELTA.
+Carga el combo con los 1 tipos de documento recuperados
+Busca al pasajero DNI 22057189
+Solicita al DAO un pasajero con tipo DNI y nro 22057189
+El DAO retorna al pasajero Rafael Jorge
+La ventana muestra al pasajero.
+Se muestra al pasajero en el panel de ida y vuelta
+Se solicita comenzar el proceso de reserva.
+Se solicita al modelo realizar una reserva de ida y vuelta
+Solicita al DAO un empleado con legajo 100
+recupera el empleado que corresponde al legajo 100.
+Realiza la reserva de ida y vuelta con pasajero 22057189
+Solicita recuperar información de la reserva con codigo 4
+Realizó la reserva y solicita que la ventana muestre la info
+Se solicita mostrar la reserva cuyo estado es confirmada
+Saliendo de la aplicación.
+Se cierra la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
