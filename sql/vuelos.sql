@@ -264,10 +264,6 @@ b.precio AS 'precio',(round(b.cant_asientos + (c.porcentaje * b.cant_asientos)) 
 
 GRANT SELECT ON vuelos.vuelos_disponibles TO 'cliente'@'%';
 
-GRANT execute on procedure vuelos.reservaSoloIda to 'empleado'@'%';
-GRANT execute on procedure vuelos.reservaIdaVuelta to 'empleado'@'%';
-
-
 #----------------------------------------------------------------------------------------------------------------
 #Stored Procedures
 
@@ -307,7 +303,7 @@ begin
 			IF (a_disponibles>0) THEN
 				SET fecha_hoy = CURDATE();
 				SET fecha_vencimiento = DATE_SUB(fecha_vuelo, INTERVAL 15 DAY);		 
-				SELECT cant_asientos INTO cant_brinda FROM brinda b WHERE nro_vuelo=b.vuelo AND clase=b.clase;
+				SELECT cant_asientos INTO cant_brinda FROM brinda b JOIN vuelos_disponibles v_d ON b.dia=v_d.dia_sale AND b.vuelo=v_d.nro_vuelo AND b.clase=v_d.clase WHERE v_d.nro_vuelo=nro_vuelo and v_d.clase=clase and v_d.fecha=fecha_vuelo;
 				IF(a_reservados<cant_brinda) THEN		#Determinamos el estado que corresponde, fijandonos si la cantidad de reservas es menor a la cantida de asientos que brinda
 					SET estadoR = 'confirmada';
 				ELSE
@@ -375,10 +371,8 @@ begin
 			IF (a_disponiblesVuelta>0) THEN
 				SET fecha_hoy = CURDATE();
 				SET fecha_vencimiento = DATE_SUB(fecha_vueloIda, INTERVAL 15 DAY);
-				
-				SELECT cant_asientos INTO cant_brindaIda FROM brinda b WHERE nro_vueloIda=b.vuelo AND claseIda=b.clase;
-				SELECT cant_asientos INTO cant_brindaVuelta FROM brinda b WHERE nro_vueloVuelta=b.vuelo AND claseVuelta=b.clase;
-
+				SELECT cant_asientos INTO cant_brindaIda FROM brinda b JOIN vuelos_disponibles v_d ON b.dia=v_d.dia_sale AND b.vuelo=v_d.nro_vuelo AND b.clase=v_d.clase WHERE v_d.nro_vuelo=nro_vueloIda and v_d.clase=claseIda and v_d.fecha=fecha_vueloIda;
+				SELECT cant_asientos INTO cant_brindaVuelta FROM brinda b JOIN vuelos_disponibles v_d ON b.dia=v_d.dia_sale AND b.vuelo=v_d.nro_vuelo AND b.clase=v_d.clase WHERE v_d.nro_vuelo=nro_vueloVuelta and v_d.clase=claseVuelta and v_d.fecha=fecha_vueloVuelta;
 				IF(a_reservadosIda<cant_brindaIda and a_reservadosVuelta<cant_brindaVuelta) THEN #Determinamos el estado que corresponde, fijandonos si la cantidad de reservas es menor a la cantida de asientos que brinda la ida y la vuelta
 					SET estadoR = 'confirmada';
 				ELSE
@@ -421,7 +415,7 @@ CREATE TRIGGER inicializarReservas
 	BEGIN
 		declare fin boolean default false;
 		declare claseBrinda VARCHAR(20);
-		declare C cursor for SELECT clase FROM brinda WHERE vuelo=NEW.vuelo;
+		declare C cursor for SELECT clase FROM brinda WHERE vuelo=NEW.vuelo and dia=NEW.dia;
 		declare continue handler for not found set fin = true;
 		open C;
 		fetch C into claseBrinda;
@@ -433,3 +427,8 @@ CREATE TRIGGER inicializarReservas
 	close C;
 END; !
 delimiter ;
+
+
+
+GRANT execute on procedure vuelos.reservaSoloIda to 'empleado'@'%';
+GRANT execute on procedure vuelos.reservaIdaVuelta to 'empleado'@'%';

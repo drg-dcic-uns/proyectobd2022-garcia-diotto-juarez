@@ -115,7 +115,7 @@ public class DAOVuelosImpl implements DAOVuelos {
 		try {
 		String nroVuelo=vuelo.getNroVuelo();
 		String fechaVuelo= Fechas.convertirDateAStringDB(vuelo.getFechaVuelo());
-		String sql= "SELECT precio,asientos_disponibles,clase FROM vuelos_disponibles WHERE nro_vuelo="+nroVuelo+" and fecha='"+fechaVuelo+"'";
+		String sql= "SELECT precio,asientos_disponibles,clase FROM vuelos_disponibles WHERE nro_vuelo='"+nroVuelo+"' and fecha='"+fechaVuelo+"'";
 		Statement stmt= conexion.createStatement();
 		ResultSet rs= stmt.executeQuery(sql);
 		ArrayList<DetalleVueloBean> resultado= new ArrayList<DetalleVueloBean>();
